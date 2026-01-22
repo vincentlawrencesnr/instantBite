@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "foodName": "Nigerian Jollof Rice",
+        "description": "",
+        "price": 2500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        "id": 2,
+        "foodName": "Yam and Egg",
+        "description": "",
+        "price": 3500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 3,
+        "foodName": "Bread and Beans",
+        "description": "",
+        "price": 2500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        "id": 4,
+        "foodName": "Fried Rice and Plantain",
+        "description": "",
+        "price": 7500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 5,
+        "foodName": "Pounded Yam and Egusi",
+        "description": "",
+        "price": 4000.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 6,
+        "foodName": "Eba and Bitterleaf Soup",
+        "description": "",
+        "price": 5500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 7,
+        "foodName": "Fufu and Oha Soup",
+        "description": "",
+        "price": 3500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 8,
+        "foodName": "Parfait and Shawarma",
+        "description": "",
+        "price": 4500.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 9,
+        "foodName": "Pasta and Turkey",
+        "description": "",
+        "price": 6600.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    },
+
+    {
+        "id": 10,
+        "foodName": "Spicy Noodles with Chicken",
+        "description": "",
+        "price": 6600.00,
+        "img": "https://img.freepik.com/free-photo/noodles-with-beef-vegetables-black-table_141793-1729.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80"
+    }
+]
+
+
+
+
+
+
+
+

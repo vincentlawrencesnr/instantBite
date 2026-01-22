@@ -1,0 +1,38 @@
+.customer-card {
+    height: 280px;
+    width: 100%;
+    border: 2px solid #eceaea;
+    transition: all 0.3s ease;
+}
+
+.customer-card:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 1.05);
+    transform: translateY(-2.05px);
+}
+
+.customer-top {
+    display: flex;
+    align-items: center;
+    
+}
+
+.customer-top img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.customer-info {
+    margin-top: 20px;
+}
+.rating-stars {
+  display: flex;
+  gap: 4px; 
+}
+
+.rating-stars i {
+  color: rgb(246, 159, 53); 
+  font-size: 18px;
+}

@@ -1,0 +1,12 @@
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-80%);
+  cursor: pointer;
+  font-size: 18px;
+}

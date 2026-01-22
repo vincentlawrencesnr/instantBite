@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "foodName": "Grilled Chicken",
+        "description": "A healthy and flavorful mix of grilled chicken, fresh greens, and vibrant veggies.",
+        "price": 7500,
+        "img": "/assets/Grilled Chicken Salad.jpg"
+    },
+    {
+        "id": 2,
+        "foodName": "Smoky Classic Burger",
+        "description": "A juicy beef patty with melted cheese, fresh lettuce, and smoky sauce in a soft toasted bun.",
+        "price": 6500,
+        "img": "/assets/Hamburger.jpg"
+    },
+
+    {
+        "id": 3,
+        "foodName": "Spiced Chicken Shawarma Wrap",
+        "description": "Tender marinated chicken, crisp veggies, and creamy sauce wrapped in a warm, soft flatbread.",
+        "price": 9000.00,
+        "img": "/assets/Shawarma.jpg"
+    },
+    {
+        "id": 4,
+        "foodName": "Fiery Margherita Pizza",
+        "description": "Crispy thin crust topped with tangy tomato, fresh mozzarella, and fragrant basil leaves.",
+        "price": 10500.00,
+        "img": "/assets/pizza veggie.jpg"
+    },
+
+    {
+        "id": 5,
+        "foodName": "Chocolate Lava Cake",
+        "description": "Rich, warm chocolate cake with a gooey molten center that melts in every bite.",
+        "price": 12500.00,
+        "img": "/assets/choco cake.jpg"
+    },
+
+    {
+        "id": 6,
+        "foodName": "Smoky Sea Grill",
+        "description": "Tender, smoky fish fillet grilled to perfection with aromatic herbs and zesty spices.",
+        "price": 9500.00,
+        "img": "/assets/Barbeque.jpg"
+    }
+]
+
+
+
+
+
+
+
+

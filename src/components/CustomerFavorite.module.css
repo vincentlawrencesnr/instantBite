@@ -1,0 +1,67 @@
+.btnnns {
+  display: inline-block;
+  padding: 12px 24px;
+  background: darkorange;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  height: 32px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  border: none;  
+}
+.btnnns:hover {
+  background: hsl(33, 100%, 45%);
+  color: white;
+}
+
+.cardbtnnns {
+    width: 120px;
+    border: 2px solid rgb(226, 222, 222);
+    border-radius: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.mycard {
+  border: 3px solid #eceaea;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;          /* ensures image scaling doesn’t overflow the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mycard:hover {
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mycard img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.mycard:hover img {
+  transform: scale(1.05);
+}
+
+/* 
+NOTE: 
+Transforms create stacking contexts — anything with position: absolute inside may appear behind children if no z-index is set.
+
+Always set a z-index for absolute elements you want on top.
+
+Make sure the parent has position: relative so your absolute element stays positioned correctly.
+*/

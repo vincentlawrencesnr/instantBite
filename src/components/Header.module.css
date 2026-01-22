@@ -1,0 +1,90 @@
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* height: 0px; */
+}
+
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white; 
+  transition: all 0.5s ease;
+}
+
+.cart-icon:hover {
+  background-color: rgb(228, 132, 13);
+  color: white;
+}
+
+.cart-icon i {
+  color: #dd6604ff;
+  transition: all 0.5s ease;
+}
+.cart-icon i:hover {
+  color: white;
+}
+
+/* .nav-linkss li nav-link {
+  color: #81807e;
+  transition: all 0.3s ease;  
+  
+}
+.nav-linkss li nav-link:hover {
+  color: rgb(228, 132, 13);
+  text-decoration: underline;
+} */
+
+
+.navLink {
+  color: #81807e; /* faded default */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navLink.active {
+  color: #dd6604ff;
+  border-bottom: 2px solid #dd6604ff;
+}
+
+.navLink:not(.active):hover {
+  color: rgb(228, 132, 13);
+  text-decoration: underline;
+}
+
+.navLink.login {
+  color: #fff;
+  background-color: #dd6604ff;
+  transition: all 0.3s ease;
+}
+
+.navLink.login:hover {
+  color: #fff; /* keep white */
+  background-color: rgb(228, 132, 13);
+}
+
+
+.cartBadge {
+  position: absolute;
+  top: 4px;
+  right: 54px;
+  background: #e6840d;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2px 6px; */
+  border-radius: 50%;
+}
+
+
+
+/* fixed-top */
+

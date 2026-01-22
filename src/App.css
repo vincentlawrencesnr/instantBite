@@ -1,0 +1,48 @@
+/* App.css */
+
+.toast-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: #2b323c;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  /* box-shadow: 0px 0px 4px rgba(23, 22, 22, 0.432); */
+  z-index: 9999;
+  animation: fadeInOut 2.5s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+opacity: 0; → completely invisible
+
+opacity: 1; → fully visible
+
+opacity: 0.5; -  50% transparent 
+*/
+
+/*
+UI Element          	        CSS Location
+Buttons/ cards               Component module
+Navbar	                     Header.module.css
+Sidebar	                     CartSidebar.module.css
+Toast / modal / overlay	     Global CSS (App.css) 
+*/

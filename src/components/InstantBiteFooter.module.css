@@ -1,0 +1,117 @@
+
+/* .social-icons i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 153, 0, 0.08); 
+  color: #cbc8c8ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+  background-color: rgb(228, 132, 13);
+  color: white;
+}
+
+.support-links a {
+  color: #faf3e0;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  
+}
+
+.support-links a:hover {
+  color: rgb(228, 132, 13);
+} */
+
+
+/* Dull white #cbc8c8ff */
+
+
+/* 
+When to use inline-flex
+
+Use it when:
+
+1. You want flexbox alignment
+2. But don’t want the element to be full-width
+
+
+Examples:
+
+Icon buttons
+Badges
+Chips
+Social icons
+
+*/
+
+.instantbite-footer {
+  margin-top: 2.5rem;
+  background-color: #2b323cff;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+/* Text */
+.tagline {
+  color: #faf3e0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Titles */
+.footerTitle {
+  color: #faf3e0;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Divider */
+.footerLine {
+  color: #faf3e0;
+  margin: 2rem 0;
+}
+
+/* Copyright */
+.copyright {
+  color: #666;
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Social icons */
+.social-icons i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 153, 0, 0.08);
+  color: #cbc8c8ff;
+  transition: 0.3s ease;
+}
+
+.social-icons i:hover {
+  background-color: rgb(228, 132, 13);
+  color: white;
+}
+
+/* Links */
+.support-links a {
+  color: #faf3e0;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.support-links a:hover {
+  color: rgb(228, 132, 13);
+}
