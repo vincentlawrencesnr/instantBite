@@ -68,7 +68,7 @@ const Header = ({ onCartClick, cartCount })=> {
             <NavLink to="/about" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>About</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/faq" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>FAQ</NavLink>
+            <NavLink to="/menu" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Menu</NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/order" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Order</NavLink>

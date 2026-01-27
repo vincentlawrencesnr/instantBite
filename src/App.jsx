@@ -18,6 +18,7 @@ import About from './Pages/About.jsx'
 import Register from './components/Register.jsx'
 import CartSidebar from './components/CartSidebar.jsx'
 import Checkout from './Pages/Checkout.jsx'
+import Menu from './Pages/Menu.jsx'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -143,6 +144,7 @@ What map() actually does:
        <Route path="/about" element={<About />} />
        <Route path="/register" element={<Register />} />
        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
+       <Route path='/menu' element={<Menu />} />
       </Routes>
       
       {isCartOpen && (

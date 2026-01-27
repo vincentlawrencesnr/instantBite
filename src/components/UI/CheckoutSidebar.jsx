@@ -45,3 +45,153 @@ export default function CheckoutSidebar({cartItems}) {
     </div>
   )
 }
+
+/*
+useContext lets you share data globally between components without passing props manually.
+
+Think of it like:
+A global data box that any component can open and read from.
+
+Examples of things commonly stored in Context:
+1. Cart data 🛒
+2. Logged-in user 👤
+3. Theme (dark/light) 🌙
+4. Language 🌍
+
+Every context has 3 parts and you will use these 3 parts:
+| Part          | Purpose                 |
+| ------------- | ----------------------- |
+| createContext | Create the global store |
+| Provider      | Supplies the data       |
+| useContext    | Reads the data          |
+
+Below are the steps to use useContext()
+
+STEP 1:
+import { createContext, useState } from "react";
+
+export const CartContext = createContext();
+
+
+function CartProvider({ children }) {
+
+  const [cartItems, setCartItems] = useState([]);
+
+  return (
+    <CartContext.Provider value={{ cartItems, setCartItems }}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+
+export default CartProvider;
+
+
+Important rule:
+
+👉 createContext() must be OUTSIDE the component
+👉 Provider + state live INSIDE the component
+
+Because:
+
+Context should be created ONCE
+State is created per provider instance
+
+
+* children is passed automatically by React when you use a component with opening and closing tags.
+
+When you write:
+
+<CartProvider>
+   <App />
+</CartProvider>
+
+React converts this to:
+
+CartProvider({ children: <App /> })
+
+So:
+children = <App />
+
+
+STEP 2: 
+On the main.jsx, we wrap the app.jsx - app inside the tag of the component providing the useContext() value (the component containing THE PROVIDER).
+
+import CartProvider from "./CartProvider";
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+      <CartProvider>
+        <App />
+      </CartProvider>
+    </BrowserRouter>
+  </StrictMode>,
+)
+
+IMPORTANT QUESTION: 
+wrapping app.jsx inside our provider component, will this make our provider component appear on our UI?
+
+ANSWER:
+❌ NO
+Provider DOES NOT render UI.
+
+WHY?
+Because CartProvider returns this:
+
+<CartContext.Provider>
+   {children}
+</CartContext.Provider>
+
+Context.Provider:
+1. Does NOT produce HTML
+2. Is NOT a visible element
+3. Is only a data wrapper
+4. It behaves like a transparent wrapper.
+
+So UI shows ONLY what is inside: <App />
+
+
+Why Provider Is Wrapped OUTSIDE App
+
+Because:
+If you put Provider INSIDE App:
+
+function App(){
+  return (
+    <CartProvider>
+      <Checkout />
+    </CartProvider>
+  )
+}
+Then ONLY Checkout can use cart context. Other components won't be able to use the value of the useContext.
+
+Wrapping app with the PROVIDER in main.jsx gives GLOBAL access of the value(s) of the useContext.
+
+
+Step 3 — Consume Context Using useContext()
+
+Now inside ANY component:
+
+Example: CheckoutSidebar.jsx
+
+import { useContext } from "react";
+import { CartContext } from "./CartProvider";
+
+function CheckoutSidebar() {
+
+  const { cartItems, setCartItems } = useContext(CartContext);
+
+  return (
+    <div>
+      {cartItems.length}
+    </div>
+  );
+}
+
+SQL - Structured Query Language
+NoSQL - Not Only SQL
+
+SQL is used to create, retrieve, update, and delete data from a data base
+
+*/

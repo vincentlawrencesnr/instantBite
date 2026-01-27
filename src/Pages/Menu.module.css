@@ -1,0 +1,142 @@
+.menu-page {
+    margin: 80px 0;
+
+}
+/* .menu-page h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+} */
+
+/* .menu-span {
+        color: #e8a528;
+    } */
+
+.search-input {
+    width: 400px;
+    padding: 14px 15px;
+    border: 1px solid #847e7e;
+    border-radius: 50px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.menu-description {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+
+/* food menu css */
+.btnnns {
+  display: inline-block;
+  padding: 12px 24px;
+  background: darkorange;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  height: 32px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  border: none;  
+}
+.btnnns:hover {
+  background: hsl(33, 100%, 45%);
+  color: white;
+}
+
+.cardbtnnns {
+    width: 120px;
+    border: 2px solid rgb(226, 222, 222);
+    border-radius: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.mycard {
+  border: 3px solid #eceaea;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;          /* ensures image scaling doesn’t overflow the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mycard:hover {
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mycard img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.mycard:hover img {
+  transform: scale(1.05);
+}
+
+/* 
+NOTE: 
+Transforms create stacking contexts — anything with position: absolute inside may appear behind children if no z-index is set.
+
+Always set a z-index for absolute elements you want on top.
+
+Make sure the parent has position: relative so your absolute element stays positioned correctly.
+*/
+
+
+@media (min-width: 768px) {
+    .menu-page {
+        margin: 80px 0;
+    }
+
+    .menu-page h1 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          font-weight: bold;
+     }
+
+     .menu-description {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-page {
+        margin: 80px 0;
+    }
+
+   .menu-page h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-weight:700;
+    }
+
+    .menu-description {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+}
+
+ 
+
+ 
+

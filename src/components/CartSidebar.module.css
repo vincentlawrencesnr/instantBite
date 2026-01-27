@@ -44,7 +44,25 @@
 .cart-item {
   display: flex;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.quantity-btn button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgb(102, 101, 101);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(251, 250, 250);
+  padding-bottom: 2px;
+}
+
+.delete-btn {
+  border: none;
+  width: 24px;
+  height: 24px;
 }
 
 .cart-item img {
@@ -83,8 +101,9 @@ flex: 0 0 123px;  123px means - “It will be exactly 123px.”
 
 .cart-item p {
   margin: 4px 0;
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff7a00;
 }
 
 .checkout-btn {

@@ -100,15 +100,15 @@ Why? Because effects capture values.
                   <h6>{item.foodName}</h6>
                   <p>₦{item.price.toLocaleString()}</p>
 
-                  <div className="quantity">
-                    <button onClick={() => decrement(item.id)}>-</button>
-                    <span>{item.quantity}</span>
+                  <div className={`quantity ${Style['quantity-btn']}`}>
+                    <button onClick={() => decrement(item.id)}>-</button> &nbsp;
+                    <span>{item.quantity}</span> &nbsp;
                     <button onClick={() => increment(item.id)}>+</button>
                   </div>
-
-                  {/* <button onClick={() => removeItem(item.id)}>Delete</button> */}
-                  <button onClick={() => removeItem(item.id)}><i className='ri-delete-bin-line'></i></button>
-                </div>
+                  </div>
+                  
+                  <button className={`${Style["delete-btn"]}`} onClick={() => removeItem(item.id)}><i className="ri-delete-bin-line"></i></button>
+                
               </div>
             ))}
 
