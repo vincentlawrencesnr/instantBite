@@ -13,6 +13,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white; 
   transition: all 0.5s ease;
+  position: relative;
 }
 
 .cart-icon:hover {
@@ -26,6 +27,18 @@
 }
 .cart-icon i:hover {
   color: white;
+}
+
+@media  (max-width: 767px) {
+  .cart-icon {
+    margin-left: 11rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .cart-icon {
+    margin-left: 22rem;
+  }
 }
 
 /* .nav-linkss li nav-link {
@@ -69,8 +82,9 @@
 
 .cartBadge {
   position: absolute;
-  top: 4px;
-  right: 54px;
+  top: 0.5px;
+  right: 0px;
+  left: 30px;
   background: #e6840d;
   color: white;
   font-size: 12px;

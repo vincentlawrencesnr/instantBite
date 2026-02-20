@@ -73,9 +73,9 @@ Why? Because effects capture values.
   */
   return (
     <div className='vw-100 vh-100 bg-dark bg-opacity-50 position-fixed top-0 start-0' onClick={handleClose} style={{zIndex: "10"}}>
-    <div className={`${Style["cart-sidebar"]} ${isClosing ? Style.closeee : Style.opennn} vh-100 bg-white position-fixed top-0 end-0 shadow-lg p-4`} style={{zIndex: "999", width: "30%"}} onClick={(e) => e.stopPropagation()}>
+    <div className={`${Style["cart-sidebar"]} ${isClosing ? Style.closeee : Style.opennn} vh-100 bg-white position-fixed top-0 end-0 shadow-lg p-4`} style={{zIndex: "999"}}  onClick={(e) => e.stopPropagation()}>
       <div className='sidebar-top mt-1 mb-4'>
-        <button className='btn-close position-absolute end-0' style={{fontSize: "10.5px"}} onClick={handleClose}></button>
+        <button className='btn-close position-absolute end-0 pe-4' style={{fontSize: "10.5px"}} onClick={handleClose}></button>
       </div>
       <div className="sidebar-body">
         {cartItems.length === 0 ? (
@@ -136,7 +136,7 @@ Why? Because effects capture values.
 
 
 
-{/* 
+{/*   style={{zIndex: "999", width: "30%"}}
   
 <Link to="/checkout" className="checkout-btn">
   Proceed to Checkout

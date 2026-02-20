@@ -10,6 +10,28 @@
     z-index: 1000;
 } */
 
+.cart-sidebar {
+  width: 85%;
+}
+
+@media (min-width: 576px) {
+  .cart-sidebar {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .cart-sidebar {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .cart-sidebar {
+    width: 30%;
+  }
+}
+
 
 .cart-sidebar {
   transform: translateX(100%);

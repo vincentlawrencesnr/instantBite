@@ -1,102 +1,160 @@
+// import instantLogo from '../assets/food icon.png'
+// import Style from './Header.module.css'
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import { Link, NavLink } from 'react-router-dom'
+
+
+
+
+
+// const Header = ({ onCartClick, cartCount })=> {
+//     const style = {
+//         backgroundColor: "#dd6604ff",
+//         color: "#fff",
+        
+//     }
+
+//     function toggleCart() {
+//         // Logic to toggle cart sidebar
+//         console.log("Cart toggled");
+//     }
+
+//      return (
+//     <nav className="navbar navbar-expand-lg fixed-top top-0 bg-light  backdrop-blur-xl px-5 py-3 header d-flex justify-content-between border border-bottom-1" style={{height: "60px"}}>
+  
+//       <div className='me-5'>
+//       <NavLink to="/" className="navbar-brand d-flex align-items-center" href="#"><img src={instantLogo} alt="instantBite" width="30" height="30" className="me-2"/>instant<span className="text-danger fw-bolder">Bite</span></NavLink>
+//       </div>
+      
+//       <button
+//         className='navbar-toggler'
+//         type="button"
+//         data-bs-toggle="collapse"
+//         data-bs-target="#mainNavbar"
+//         aria-controls="mainNavbar"
+//         aria-expanded="false"
+//         aria-label="Toggle navigation"
+//       >
+//         <span className="navbar-toggler-icon"></span>
+//       </button>
+
+//       <div className="collapse navbar-collapse" id="mainNavbar">
+//         <ul className={`${Style["nav-linkss"]} navbar-nav gap-4`} style={{marginLeft: "200px"}}>
+//           <li className="nav-item">
+//             <NavLink to="/" end className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Home</NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/about" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>About</NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/menu" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Menu</NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/order" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Order</NavLink>
+//           </li>
+//           <li className="nav-item">
+//             <NavLink to="/contact" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Contact</NavLink>
+//           </li>
+
+//           <li className="nav-item">
+//             <div className="d-inline-block">
+//             <NavLink to="/login" className="nav-link px-3 py-1 rounded-5 text-white" style={{backgroundColor: "#dd6604ff"}}>Login</NavLink>
+//             </div> 
+//           </li>
+//         </ul>
+//       </div>
+
+//       <div className={`${Style["cart-icon"]} p-2 me-3`} id="mainNavbar" onClick={onCartClick}>
+//         <i className="ri-shopping-cart-2-line fs-4"></i>
+
+//         {cartCount > 0 && (
+//         <span className={Style.cartBadge}>{cartCount}</span>
+//       )}
+//       </div>
+//     </nav>
+//   );
+// }
+
+// export default Header;
+
 import instantLogo from '../assets/food icon.png'
 import Style from './Header.module.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
+const Header = ({ onCartClick, cartCount }) => {
+  const loginStyle = { backgroundColor: "#dd6604ff", color: "#fff" };
 
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+      <div className="container-fluid d-flex justify-content-between align-items-center">
+        {/* Logo */}
+        <NavLink to="/" className="navbar-brand d-flex align-items-center me-lg-5">
+          <img src={instantLogo} alt="instantBite" width="30" height="30" className="me-2"/>
+          instant<span className="text-danger fw-bold">Bite</span>
+        </NavLink>
 
+        {/* Hamburger */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
+        {/* Navbar Links */}
+        <div className="collapse navbar-collapse ms-lg-5" id="mainNavbar">
+          <ul className="navbar-nav ms-lg-auto  mb-2 mb-lg-0 gap-3 align-items-center">
+            <li className="nav-item">
+              <NavLink to="/" end className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Home</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/about" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>About</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/menu" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Menu</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/order" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Order</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Contact</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login" className="nav-link px-3 py-1 rounded-5 text-white" style={loginStyle}>Login</NavLink>
+            </li>
+          </ul>
 
-const Header = ({ onCartClick, cartCount })=> {
-    const style = {
-        backgroundColor: "#dd6604ff",
-        color: "#fff",
+          <div className={`${Style["cart-icon"]} p-2 mt-3 me-lg-5 ms-lg-auto`} id="mainNavbar" onClick={onCartClick}>
+         <i className="ri-shopping-cart-2-line fs-4"></i>
+
+         {cartCount > 0 && (
+           <span className={Style.cartBadge}>{cartCount}</span>
+        )}
+       </div>
+        </div>
+
+        {/* Cart Icon */}
+        {/* <div className="d-flex ms-3" onClick={onCartClick} style={{cursor: "pointer"}}>
+          <i className="ri-shopping-cart-2-line fs-4"></i>
+          {cartCount > 0 && (
+            <span className={Style.cartBadge}>{cartCount}</span>
+          )}
+        </div> */}
+
         
-    }
-    // return (
-    //     <div className='d-flex justify-content-between align-items-center py-3 px-5 header'>
-    //         <div className="navbrand d-flex align-items-center">
-    //             <h3><img className='me-2' width="30" height="30" src={instantLogo} alt="" />instant<span className='text-danger fw-bolder'>Bite</span></h3>
-    //         </div>
-    //         <ul className="nav-links d-flex justify-content-around align-items-center gap-4 list-unstyled">
-    //             <li><a className='text-decoration-none text-dark' href="">Home</a></li>
-    //             <li><a className='text-decoration-none text-dark'href="">About</a></li>
-    //             <li><a className='text-decoration-none text-dark'href="">FAQ</a></li>
-    //             <li><a className='text-decoration-none text-dark'href="">Food Category</a></li>
-    //             <li><a className='text-decoration-none text-dark'href="">Contact Us</a></li>
-    //             {/* <li><a className='text-decoration-none text-dark'href="">Cart</a></li> */}
-    //             <li><a className='text-decoration-none pb-2 px-3 py-1 rounded-5'href="" style={style}>Login</a></li>
-    //         </ul>
-
-    //         <div className='cart p-3 rounded-circle bg-light'>
-    //             <i className="ri-shopping-cart-2-line fs-3" style={{color: "#dd6604ff"}}></i>
-    //         </div>
-    //     </div>
-        
-    // )
-
-    function toggleCart() {
-        // Logic to toggle cart sidebar
-        console.log("Cart toggled");
-    }
-
-     return (
-    <nav className="navbar navbar-expand-lg fixed-top top-0 bg-light  backdrop-blur-xl px-5 py-3 header d-flex justify-content-between border border-bottom-1" style={{height: "60px"}}>
-      {/* Brand */}
-      <div className='me-5'>
-      <NavLink to="/" className="navbar-brand d-flex align-items-center" href="#"><img src={instantLogo} alt="instantBite" width="30" height="30" className="me-2"/>instant<span className="text-danger fw-bolder">Bite</span></NavLink>
-      </div>
-      {/* Hamburger button */}
-      <button
-        className='navbar-toggler'
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="mainNavbar">
-        <ul className={`${Style["nav-linkss"]} navbar-nav gap-4`} style={{marginLeft: "200px"}}>
-          <li className="nav-item">
-            <NavLink to="/" end className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Home</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/about" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>About</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/menu" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Menu</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/order" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Order</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/contact" className={({ isActive }) => isActive ? `${Style.navLink} ${Style.active}` : Style.navLink}>Contact</NavLink>
-          </li>
-
-          <li className="nav-item">
-            <div className="d-inline-block">
-            <NavLink to="/login" className="nav-link px-3 py-1 rounded-5 text-white" style={{backgroundColor: "#dd6604ff"}}>Login</NavLink>
-            </div> 
-          </li>
-        </ul>
-      </div>
-
-      <div className={`${Style["cart-icon"]} p-2 me-3`} onClick={onCartClick}>
-        <i className="ri-shopping-cart-2-line fs-4"></i>
-
-        {cartCount > 0 && (
-        <span className={Style.cartBadge}>{cartCount}</span>
-      )}
       </div>
     </nav>
   );
 }
 
 export default Header;
+
 
 /*   
 Why end on Home?

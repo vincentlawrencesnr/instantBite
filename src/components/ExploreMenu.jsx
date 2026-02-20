@@ -9,57 +9,57 @@ import Style from './ExploreMenu.module.css';
 function ExploreMenu() {
 
     return(
-        <div className="container bg-body-secondary" style={{marginTop: "7rem", marginBottom: "7rem"}}>
+        <div className="container-fluid bg-body-secondary" style={{marginTop: "7rem", marginBottom: "7rem"}}>
         <div className="explore-title mb-5 text-center">
             <h2 style={{fontWeight: "bold", fontSize: "2.5rem"}}>Explore Our <span className="menu-span" style={{color: "#FFA500"}}>Menu</span></h2>
             <p style={{fontSize: "1.2rem", marginTop: "1.3rem", color: "#555"}}>From flame-grilled burgers to authentic Middle Eastern cuisine, discover <br /> flavors that'll make your taste buds dance.</p>
         </div>
-        <div className={`${Style["card-container"]}  mt-4"`}>
-            <div className={`${Style["card-explore"]} `}>
+        <div className={`${Style["card-container"]} row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 mt-4"`}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={Beef} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
 
-                <div className={`${Style["card-bottom"]} `}>
+                <div className={`${Style["card-bottom"]}`}>
                     <h6>Beef Sauce</h6>
                     <p style={{color: "#555", fontWeight: "3.5rem"}}>Rich, bold and slow-cooked to perfection - our beef sauce turns every bite into comfort.</p>
                 </div>
             </div>
 
-            <div className={`${Style["card-explore"]} `}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={FriedEggSauce} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
 
-                <div className={`${Style["card-bottom"]} `}>
+                <div className={`${Style["card-bottom"]}`}>
                     <h6>Fried Egg Sauce</h6>
                     <p style={{color: "#555", fontWeight: "3.5rem"}}>Golden, savoury, and irresistibly satisfying - our fried egg sauce brings simple comfort to every plate.</p>
                 </div>
             </div>
 
-            <div className={`${Style["card-explore"]} `}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={MashedFish} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
 
-                <div className={`${Style["card-bottom"]} `}>
+                <div className={`${Style["card-bottom"]}`}>
                     <h6>Mashed Fish</h6>
                     <p style={{color: "#555", fontWeight: "3.5rem"}}>Crispy, tender, and full of flavour - our mashed fish is comfort made delicious.</p>
                 </div>
             </div>
 
-            <div className={`${Style["card-explore"]} `}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={GarnishedRice} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
 
-                <div className={`${Style["card-bottom"]} `}>
+                <div className={`${Style["card-bottom"]}`}>
                     <h6>Garnished Rice</h6>
                     <p style={{color: "#555", fontWeight: "3.5rem"}}>Colorful, fragrant, and bursting with taste - our garnsihed rice makes every meal feel special. </p>
                 </div>
             </div>
 
-            <div className={`${Style["card-explore"]} `}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={PlantainPorridge} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
@@ -70,7 +70,7 @@ function ExploreMenu() {
                 </div>
             </div>
 
-            <div className={`${Style["card-explore"]} `}>
+            <div className={`${Style["card-explore"]} col`}>
                 <div className={`${Style["card-top"]} `}>
                     <img src={QuickDessert} loading="lazy" className={``} style={{width: "175px", height: "150px"}} alt="" />
                 </div>
