@@ -3,7 +3,7 @@ import CustomerFavorite from '../components/CustomerFavorite.jsx'
 import Style from './Menu.module.css'
 import FoodMenu from '../CustomerFavorite.json'
 
-export default function Menu() {
+export default function Menu({ addToCart }) {
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState("All");
 

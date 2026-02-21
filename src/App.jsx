@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -23,8 +23,18 @@ import Menu from './Pages/Menu.jsx'
 function App() {
   const [count, setCount] = useState(0);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  // const [cartItems, setCartItems] = useState([]);
   const [toast, setToast] = useState(null);
+
+  const [cartItems, setCartItems] = useState(() => {
+  const savedCart = localStorage.getItem("cart");
+  return savedCart ? JSON.parse(savedCart) : [];
+});
+
+
+useEffect(() => {
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+}, [cartItems]);
 
   const location = useLocation();
 
@@ -146,7 +156,7 @@ What map() actually does:
        <Route path="/about" element={<About />} />
        <Route path="/register" element={<Register />} />
        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
-       <Route path='/menu' element={<Menu />} />
+       <Route path='/menu' element={<Menu addToCart={addToCart}/>} />
        <Route path="/contact" element={<GetInTouch />} />
       </Routes>
       

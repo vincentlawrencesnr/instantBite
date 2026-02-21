@@ -29,7 +29,7 @@
   color: white;
 }
 
-@media  (max-width: 767px) {
+/* @media  (max-width: 767px) {
   .cart-icon {
     margin-left: 11rem;
   }
@@ -39,7 +39,55 @@
   .cart-icon {
     margin-left: 22rem;
   }
+} */
+
+@media  (min-width: 320px) {
+  .cart-icon {
+    margin-left: 11rem;
+  }
 }
+
+@media  (min-width: 480px) {
+  .cart-icon {
+    margin-left: 14rem;
+  }
+}
+
+@media  (min-width: 576px) {
+  .cart-icon {
+    margin-left: 22rem;
+  }
+}
+
+@media  (min-width: 768px) {
+  .cart-icon {
+    margin-left: 22rem;
+  }
+}
+
+@media  (min-width: 900px) {
+  .cart-icon {
+    margin-left: 26rem;
+  }
+}
+
+/* @media  (min-width: 992px) {
+  .cart-icon {
+    margin-left: 22rem;
+  }
+}
+
+@media  (min-width: 1200px) {
+  .cart-icon {
+    margin-left: 11rem;
+  }
+}
+
+@media  (min-width: 1400px) {
+  .cart-icon {
+    margin-left: 11rem;
+  }
+} */
 
 /* .nav-linkss li nav-link {
   color: #81807e;
@@ -99,6 +147,32 @@
 }
 
 
-
 /* fixed-top */
+
+
+
+/* Base styles = Mobile (0px and up) */
+/* 
+
+@media (min-width: 320px) { }   - /* Small devices (small phone) */
+/* 
+
+@media (min-width: 480px) { }   - /* Small devices (phone) */
+/* 
+
+@media (min-width: 576px) { }   - /* Small devices (tablets) */
+
+/*
+@media (min-width: 768px) { }  - /* Medium devices (tablets landscape / small laptops) */
+
+/*
+@media (min-width: 992px) { }  - /* Large devices (laptops) */
+
+/*
+@media (min-width: 1200px) { }  - /* Extra large devices (desktops) */
+
+/*
+@media (min-width: 1400px) { }  - /* Very large screens */
+
+
 
