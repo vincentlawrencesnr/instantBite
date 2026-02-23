@@ -31,10 +31,51 @@ function App() {
   return savedCart ? JSON.parse(savedCart) : [];
 });
 
+//  After initialization, React is no longer using localStorage.
+//  It is using React state for rendering and updates. localStorage is only used to get the initial value for cartItems when the component first mounts.
+
 
 useEffect(() => {
   localStorage.setItem("cart", JSON.stringify(cartItems));
 }, [cartItems]);
+
+// So every time cartItems changes:
+// It saves the NEW value to localStorage (old value gets overwritten. it updates the value in localStorage (entirely), it does not create a new key or append to the old value).
+// But rendering is still happening from React state — not from localStorage.
+
+/*
+| React State        | localStorage              |
+| ------------------ | ------------------------- |
+| Lives in memory    | Lives in browser storage  |
+| Controls rendering | Used only for persistence |
+| Fast               | Slightly slower           |
+| Changes instantly  | Just backup storage       |
+
+
+So When Exactly Does “Once” Happen?
+
+It happens during:
+
+👉 The very first render cycle
+👉 When the component mounts
+
+Not:
+
+Not on every re-render
+Not on every state change
+Not on every click
+
+Only on mount.
+
+If you refresh the page?
+
+💥 Component unmounts
+💥 Mounts again
+💥 Initializer runs again
+💥 It reads from localStorage again
+
+That’s why refresh restores your cart.
+*/
 
   const location = useLocation();
 

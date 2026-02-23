@@ -24,8 +24,8 @@ function HeroSection(props) {
 
 
     return(
-        <section className="hero-section bg-body-secondary d-flex justify-content-between align-items-center px-5" style={{height: "90vh", paddingTop: "70px"}}>
-            <div className="text-content w-50">
+        <section className={`${classes["hero-section"]} bg-body-secondary d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-start px-3 px-lg-3 gap-lg-5 text-center text-lg-start mt-lg-3`} style={{ paddingTop: "70px"}}>
+            <div className="text-content w-100 w-lg-50 mb-5 mb-lg-0">
                 <div  className={clsx(classes["world-rate"], "")}>
                     <h4 style={{color: "#dd6640"}}><i className="ri-star-fill me-3"></i>World's #1 Fastest Food Delivery Service</h4>
                 </div>
@@ -35,12 +35,12 @@ function HeroSection(props) {
                 <div className="hero-description mb-4">
                     <p>Experience the ultimate convenience with instantBite - your-go-to app for fast, reliable food delivery from your favorite local restaurants. Satisfy your hunger in just a few taps! </p>
                 </div>
-                <div className={`${classes["hero-buttons"]} d-flex gap-3`}>
+                <div className={`${classes["hero-buttons"]} d-flex gap-3 w-100 justify-content-center justify-content-lg-start`}>
                     <button className="btn btn-lg border-0 text-white" style={{backgroundColor: "#dd6604ff"}}>Order Now <i className="ri-arrow-right-long-line"></i></button>
                     <Link to="/menu" className="btn btn-outline-secondary btn-lg">Explore Menu</Link>
                 </div>
 
-                <div className="details d-flex gap-4 mt-5">
+                <div className={`${classes.details} d-flex gap-4 mt-5`}>
                 <div className="delivery d-flex gap-2 mt-4">
                     <div className={`${classes["d-icon"]} `}>
                         <i className="ri-car-line"></i>
@@ -71,20 +71,20 @@ function HeroSection(props) {
                 </div>
             </div>
             </div>
-            <div className="position-relative w-50">
+            <div className="position-relative w-100 w-lg-50">
             <div className="img-content d-flex justify-content-center align-items-center">
-                <img src="https://img.freepik.com/premium-photo/tasty-traditional-meal-with-rice-chicken-veggies-plate_711700-32017.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80" alt="" className={`${classes["hero-img"]} img-fluid rounded-3 w-75 h-75`}/>
+                <img src="https://img.freepik.com/premium-photo/tasty-traditional-meal-with-rice-chicken-veggies-plate_711700-32017.jpg?uid=R225444039&ga=GA1.1.1001886661.1764853609&semt=ais_hybrid&w=740&q=80" alt="" className={`${classes["hero-img"]} img-fluid rounded-3 w-100 w-lg-75`}/>
             </div>
 
-            <div className="mini box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1" style={{left: "50px", top: "-20px"}}>
+            <div className={`${classes.mini} box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1`} style={{left: "50px", top: "-20px"}}>
             <img width="40px" src={chicken} alt=""  className={`${classes["hero-icons"]}`}/>
             </div>
 
-            <div className="mini box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1" style={{right: "40px", bottom: "-20px"}}>
+            <div className={`${classes.mini} box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1`} style={{right: "40px", bottom: "-20px"}}>
             <img width="40px" src={parfait} alt="" className={`${classes["hero-icons"]}`}/>
             </div>
 
-            <div className="mini box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1" style={{right: "40px", top: "200px"}}>
+            <div className={`${classes.mini} box-shadow-medium bg-white rounded-3 p-3 position-absolute z-1`} style={{right: "40px", top: "200px"}}>
             <img width="40px" src={spice} alt="" className={`${classes["hero-icons"]}`}/>
             </div>
             </div>
